@@ -11,8 +11,8 @@ RUN apt-get update && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     rm -r /var/lib/apt/lists/*
 
-VOLUME ["/app"]
-WORKDIR /app
+VOLUME ["/srv"]
+WORKDIR /srv
 
 CMD ["-"]
 ENTRYPOINT ["composer", "--ansi"]
